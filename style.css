@@ -1,0 +1,98 @@
+/* Dont change any not commented lines if you dont know how to use it */
+
+/* Numerator color | Separator and denominator color | SVG size */
+:root {
+  --text: #e9e9ef; /* numerator color */
+  --muted: #b7b7c3; /* separator and denominator color */
+
+  --sz: 180px; /* SVG size */
+  --font-stack: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Website background color */
+html,
+body {
+  height: 100%;
+  background: radial-gradient(
+    80% 60% at 50% 10%,
+    #161822,
+    #0b0b0e
+  ); /* gradient background */
+  /* background: #000000; */ /* unique color background */
+  color: var(--text);
+}
+
+/* Number management | Number height */
+.counter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column; /* number management */
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+  transform: translateY(1%); /* number height */
+  font-family: var(--font-stack);
+}
+
+/* Numerator size */
+.counter .current {
+  font-size: calc(var(--sz) * 0.13); /* numerator size */
+}
+/* Separator size */
+.counter .sep {
+  font-size: calc(var(--sz) * 0.1); /* separator size */
+  color: var(--muted);
+}
+/* Denominator size | Separator and denominator range */
+.counter .max {
+  font-size: calc(var(--sz) * 0.13); /* denominator size */
+  color: var(--muted);
+  margin-top: 0px; /* separator and denominator range */
+}
+
+.wrap {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.svgClass {
+  position: relative;
+  width: var(--sz);
+  height: var(--sz);
+  top: -70%;
+}
+
+/* Top color */
+.svg-bg {
+  fill: #3b2200; /* top color */
+}
+
+.svg-fill {
+  fill: url(#hp-grad);
+}
+
+/* Border color and size */
+.svg-stroke {
+  fill: none;
+  stroke: #8d4e00; /* Border color */
+  stroke-width: 2; /* Border size */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&family=Sixtyfour&display=swap');
+
+label {
+  /* position: relative; */
+  /* display: grid; */
+  /* text-align: center; */
+  gap: -4px;
+  font-size: 2rem;
+  color: #d2d3e3;
+  margin-bottom: 1em;
+  font-family: Sixtyfour, cursive;
+}
